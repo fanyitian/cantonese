@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta http-equiv="Content-Style-type" content="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <title>Cantonese</title>
+    <title>百度粤语社 Baidu-Cantonese</title>
     <link rel="shortcut icon" href="/Public/Common/Image/logo.png" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap-theme.css"/>
@@ -73,7 +73,7 @@
 
                 <div class="activity-content">
                     <div class="row">
-                        <?php echo $activity['html'];?>
+                        <?php echo $activity['contents'];?>
                     </div>
                 </div>
             </div>
@@ -112,16 +112,24 @@
                 </div>
                 <div class="act-content">
 
-                    <div class="">
-                        <img class="img-hi" src="/Public/Common/Image/qr_code.png">
+                    <div class="m-t-10 f-l">
+                        <div class="m-t-10">
+                            <img class="img-hi-logo" src="/Public/Common/Image/hi_logo.png"> Hi群:
+                            <a href="baidu://message/?id=1489013">
+                                1489013
+                            </a></div>
+                        <div class="m-t-20">
+                            <img class="img-hi-logo" src="/Public/Common/Image/hi_logo.png"> 社长:
+                            <a href="baidu://message/?id=centalpha">
+                                小石杰一郎
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="m-t-10">
-                        <img class="img-hi-logo" src="/Public/Common/Image/hi_logo.png">Hi群:
-                        <a href="baidu://message/?id=1489013">
-                            1489013
-                        </a>
+                    <div class="f-l m-l-20">
+                        <img class="img-hi" src="/Public/Common/Image/qr_code.png">
                     </div>
+                    <div style="clear:both"></div>
                 </div>
                 <div class="act-footer">
                 </div>
