@@ -75,56 +75,32 @@
                         <?php echo $activity['html'];?>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
 
 
-        <div class="col-md-4 hidden-xs">
+        <div class="col-md-4">
             <div class="container-2">
                 <div class="container-3">
-                    <div class="act-heading">活动</div>
+                    <div class="act-heading">公告</div>
                 </div>
                 <div class="act-content">
                     <div class="list-group">
-                        <section class="list-group-item row">
-                            <div class="col-md-3">
-                                <a href="/events/1047030274">11月27日</a>
+
+                        <?php foreach($notice as $val):?>
+                        <div class="list-group-item">
+                            <div class="item-left label label-success">
+                                <?php echo $val['name'];?>
                             </div>
-                            <div class="event-title">
-                                <a href="/events/1047030274">国际硬件投资 &amp; 创业趴 - 英文分享专场 + 硬创欢乐啤酒夜</a>
+                            <div class="item-content">
+                                <?php echo $val['contents'];?>
                             </div>
-                        </section>
-                        <section class="list-group-item row">
-                            <div class="col-md-3">
-                                <a href="/events/1047030273">11月15日</a>
-                            </div>
-                            <div class="event-title">
-                                <a href="/events/1047030273">DevFest 2015 GDG @ ShenzhenWare 跨界派对</a>
-                            </div>
-                        </section>
-                        <section class="list-group-item row">
-                            <div class="col-md-3">
-                                <a href="/events/1047030261">11月06日</a>
-                            </div>
-                            <div class="event-title">
-                                <a href="/events/1047030261">50 后创业导师对话 80 后潮人创业家 -- 潮汕两日省亲活动</a>
-                            </div>
-                        </section>
-                        <section class="list-group-item row">
-                            <div class="col-md-3">
-                                <a href="/events/1047030271">11月06日</a>
-                            </div>
-                            <div class="event-title">
-                                <a href="/events/1047030271">设计创想，开启「智造未来」-- 2015 深圳国际工业设计大展</a>
-                            </div>
-                        </section>
+                            <div style="clear:both"></div>
+                        </div>
+                        <?php endforeach;?>
                     </div>
                 </div>
                 <div class="act-footer">
-                    <!--<a href="/events">更多活动</a>-->
                 </div>
             </div>
 

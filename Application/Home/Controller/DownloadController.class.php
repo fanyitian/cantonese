@@ -17,13 +17,16 @@
 namespace Home\Controller;
 
 use Home\Model\DownloadModel;
+use Home\Model\NoticeModel;
 
 class DownloadController extends CommonController
 {
     public function index()
     {
         $data = DownloadModel::Instance()->getList();
+        $notice = NoticeModel::Instance()->getList();
 
+        $this->assign('notice', $notice);
         $this->assign('data', $data);
         $this->display();
     }
