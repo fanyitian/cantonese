@@ -27,6 +27,12 @@ a {
     }
 }
 
+.m-t-10{margin-top: 10px;  }
+.m-t-20{margin-top: 20px;  }
+.m-t-30{margin-top: 30px;  }
+.m-t-40{margin-top: 40px;  }
+
+
 /*===== header =====*/
 .ware-navbar {
     background: #25a8e0;
@@ -80,6 +86,9 @@ a {
     font-size: 12px;
     padding: 28px 0 38px;
     color: #666;
+}
+.copyright img{
+    height: 13px;
 }
 
 /*===== Content =====*/
@@ -142,6 +151,17 @@ a {
     line-height: 21px;
 }
 
+.contact-us{
+
+}
+
+.contact-us .img-hi{
+    width: 100px;
+}
+
+.contact-us .img-hi-logo{
+    height: 20px;
+}
 
 
 .download {

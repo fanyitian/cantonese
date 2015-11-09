@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Style-type" content="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <title>Cantonese</title>
+    <link rel="shortcut icon" href="/Public/Common/Image/logo.png" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap-theme.css"/>
 
@@ -22,8 +23,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                Cantonese
-                <!--<img alt="粤语社" style="width: 70px" src="/Public/Common/Image/index/icon.jpg" />-->
+                <!--Cantonese-->
+                <img alt="粤语社" style="height: 40px" src="/Public/Common/Image/logo.png" />
             </a>
         </div>
 
@@ -104,11 +105,38 @@
                 </div>
             </div>
 
+
+            <div class="container-2 contact-us">
+                <div class="container-3">
+                    <div class="act-heading">加入我们</div>
+                </div>
+                <div class="act-content">
+
+                    <div class="">
+                        <img class="img-hi" src="/Public/Common/Image/qr_code.png">
+                    </div>
+
+                    <div class="m-t-10">
+                        <img class="img-hi-logo" src="/Public/Common/Image/hi_logo.png">Hi群:
+                        <a href="baidu://message/?id=1489013">
+                            1489013
+                        </a>
+                    </div>
+                </div>
+                <div class="act-footer">
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
-<div class="copyright">Copyright &copy; 2015 百度粤语社团</div>
+<!--<div class="copyright">Copyright &copy; 2015 百度粤语社团</div>-->
+<div class="copyright">
+    <img src="/Public/Common/image/copyright.png">
+    <br>
+    <img src="/Public/Common/image/logo2.png">
+</div>
 <script src="/Public/jquery-1.11.1.min.js"></script>
 <script src="/Public/Bootstrap/js/bootstrap.min.js"></script>
 </body>

@@ -116,7 +116,11 @@
                     <div class="editor-wrapper">
                         <input id="activity_id" type="hidden" name="activity_id" value="<?php echo $_GET['id'];?>">
                         <input id="activity_title" class="title" type="text" placeholder="标题:">
-                        <textarea id="editor" placeholder="Content here ...." style="display: none;"></textarea>
+
+                        <!-- 加载编辑器的容器 -->
+                        <script id="editor" name="content" type="text/plain"><?php echo ($data["content"]); ?></script>
+
+                        <!--<textarea id="editor" placeholder="Content here ...." style="display: none;"></textarea>-->
                     </div>
                     <div class="option m-t-10">
                         <button type="button" class="btn btn-primary btn-submit">保存</button>
@@ -129,12 +133,23 @@
 </div>
 
 <script src="/Public/Admin/Js/activity.js"></script>
-<script src="/Public/Common/JS/simplemde.min.js"></script>
+<!--<script src="/Public/Common/JS/simplemde.min.js"></script>-->
+
+<!-- 配置文件 -->
+<script type="text/javascript" src="/Public/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/Public/ueditor/ueditor.all.js"></script>
+
 
 <script type="text/javascript">
     $(document).ready(function () {
-        var editor = new SimpleMDE({element: $("#editor")[0]});
-        window.editor = editor;
+        var ue = UE.getEditor('editor', {
+            initialFrameHeight: 600
+        });
+        window.ue = ue;
+
+//        var editor = new SimpleMDE({element: $("#editor")[0]});
+//        window.editor = editor;
 
 //        editor.value("This text will appear in the editor");
 

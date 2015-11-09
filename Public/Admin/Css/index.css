@@ -81,6 +81,9 @@ a {
     padding: 28px 0 38px;
     color: #666;
 }
+.copyright img{
+    height: 50px;
+}
 
 .m-t-10{margin-top: 10px;  }
 .m-t-20{margin-top: 20px;  }
