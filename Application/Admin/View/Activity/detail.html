@@ -1,0 +1,61 @@
+<include file="./Application/Admin/View/head.html"/>
+<!--<link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css"/>-->
+
+<link rel="stylesheet" href="__PUBLIC__/Common/Css/simplemde.min.css">
+
+<style>
+    .editor-wrapper {
+        padding: 10px;
+        margin: 0 auto;
+        border: 1px solid #eee;
+    }
+
+    .editor-wrapper input.title {
+        font: 18px "Helvetica Neue", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+        background: transparent;
+        padding: 4px;
+        width: 100%;
+        border: none;
+        outline: none;
+        opacity: 0.6;
+    }
+</style>
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="widget" id="main-widget">
+                <div class="widget-header">
+                    <span class="widget-caption">编辑活动</span>
+                    <!--Widget Buttons-->
+                </div>
+                <!--Widget Header-->
+                <div class="widget-body">
+                    <div class="editor-wrapper">
+                        <input id="activity_id" type="hidden" name="activity_id" value="<?php echo $_GET['id'];?>">
+                        <input id="activity_title" class="title" type="text" placeholder="标题:">
+                        <textarea id="editor" placeholder="Content here ...." style="display: none;"></textarea>
+                    </div>
+                    <div class="option m-t-10">
+                        <button type="button" class="btn btn-primary btn-submit">保存</button>
+                    </div>
+                </div>
+                <!--Widget-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="__PUBLIC__/Admin/Js/activity.js"></script>
+<script src="__PUBLIC__/Common/JS/simplemde.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var editor = new SimpleMDE({element: $("#editor")[0]});
+        window.editor = editor;
+
+//        editor.value("This text will appear in the editor");
+
+    });
+</script>
+<include file="./Application/Admin/View/foot.html"/>

@@ -1,0 +1,31 @@
+<include file="./Application/Admin/View/head.html"/>
+
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="widget" id="main-widget">
+                <div class="widget-header">
+                    <span class="widget-caption">口令授权</span>
+                    <!--Widget Buttons-->
+                </div>
+                <!--Widget Header-->
+                <div class="widget-body">
+                    <form>
+                        <input type="hidden" name="id" id="id-notice_id">
+
+                        <div class="form-group">
+                            <label for="login-code" class="control-label">请输入管理员口令:</label>
+                            <input type="text" class="form-control" id="login-code" name="code">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-xs btn-submit">Submit</button>
+                    </form>
+                </div>
+                <!--Widget-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="__PUBLIC__/Admin/Js/login.js"></script>
+<include file="./Application/Admin/View/foot.html"/>
