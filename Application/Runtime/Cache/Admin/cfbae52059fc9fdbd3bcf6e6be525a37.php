@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta http-equiv="Content-Style-type" content="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <title>Cantonese</title>
+    <title>管理后台</title>
+    <link rel="shortcut icon" href="/Public/Common/Image/logo.png" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap-theme.css"/>
 
@@ -25,8 +26,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                Cantonese
-                <!--<img alt="粤语社" style="width: 70px" src="/Public/Common/Image/index/icon.jpg" />-->
+                <img alt="粤语社" style="height: 40px" src="/Public/Common/Image/logo.png" />管理后台
             </a>
         </div>
 

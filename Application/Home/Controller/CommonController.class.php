@@ -14,6 +14,8 @@ class CommonController extends Controller
 {
     protected $needAuth = false;
 
+    protected $param;
+
     public function _initialize()
     {
         if ($this->needAuth) {
@@ -73,6 +75,35 @@ class CommonController extends Controller
         echo json_encode($return);
         exit;
     }
+
+
+    /**
+     * 设置变量
+     *
+     * @param mixed $name
+     * @param string $value
+     *
+     * @return \Think\Action
+     */
+    protected function assign($name, $value = '')
+    {
+        $this->param[$name] = $value;
+        return parent::assign($name, $value);
+    }
+
+    /**
+     * 渲染模板
+     */
+    protected function display()
+    {
+        $display = $this->param('__display');
+        if (isset($display) && $display == 'json') {
+            $this->jsonOut(0, 'ok', $this->param);
+        }
+
+        parent::display();
+    }
+
 
 
 }

@@ -77,37 +77,8 @@ $(document).ready(function () {
                 }
             });
         });
-
-
-        //var id = $('#activity_id').val();
-        //
-        //var title = $('#activity_title').val();
-        //
-        //var contents = editor.value();
-        //
-        ////var html = $('.editor-preview').html();
-        //var html = getEditorHtml();
-        //
-        //$.ajax({
-        //    url: '/admin/activity/save',
-        //    type: "POST",
-        //    dataType: "json",
-        //    data: {
-        //        id: id,
-        //        title: title,
-        //        contents: contents,
-        //        html: html
-        //    },
-        //    success: function (json) {
-        //        if (json.status != 1) {
-        //            alert(json.message);
-        //            return false;
-        //        }
-        //        window.location.href = '/admin/activity/detail?id=' + json.data.id;
-        //    }
-        //});
-
     });
+
 
 
     /**
@@ -126,6 +97,31 @@ $(document).ready(function () {
             dataType: "json",
             data: {
                 id: id
+            },
+            success: function (json) {
+                if (json.status != 1) {
+                    alert(json.message);
+                    return false;
+                }
+
+                window.location.reload();
+            }
+        });
+    });
+
+    /**
+     * 修改状态
+     */
+    $('.btn-change').click(function () {
+        var id = $(this).data('id');
+
+        $.ajax({
+            url: "/admin/activity/status",
+            type: "GET",
+            dataType: "json",
+            data: {
+                id: id,
+                type: 'change'
             },
             success: function (json) {
                 if (json.status != 1) {

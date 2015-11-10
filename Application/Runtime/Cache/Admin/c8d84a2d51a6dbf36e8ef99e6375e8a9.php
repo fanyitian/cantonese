@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta http-equiv="Content-Style-type" content="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <title>Cantonese</title>
+    <title>管理后台</title>
+    <link rel="shortcut icon" href="/Public/Common/Image/logo.png" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="/Public/Bootstrap/css/bootstrap-theme.css"/>
 
@@ -25,8 +26,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                Cantonese
-                <!--<img alt="粤语社" style="width: 70px" src="/Public/Common/Image/index/icon.jpg" />-->
+                <img alt="粤语社" style="height: 40px" src="/Public/Common/Image/logo.png" />管理后台
             </a>
         </div>
 
@@ -108,6 +108,7 @@
                             <th>id</th>
                             <th>title</th>
                             <th>更新时间</th>
+                            <th>状态</th>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -117,11 +118,16 @@
                             <th scope="row"><?php echo $val['id'];?></th>
                             <td><?php echo $val['title'];?></td>
                             <td><?php echo $val['u_time'];?></td>
+                            <td class="<?php echo ($val['status'] == 0) ? 'text-danger' : 'text-muted';?>"><?php echo $val['status_name'];?></td>
                             <td>
                                 <a href="/admin/activity/detail?id=<?php echo $val['id'];?>"
                                    class="btn btn-default btn-sm btn-edit">
                                     编辑
                                 </a>
+                                <button type="button" class="btn btn-warning btn-sm btn-change"
+                                        data-id="<?php echo $val['id'];?>">
+                                    <?php echo ($val['status'] == 0) ? '隐藏' : '显示';?>
+                                </button>
                                 <button type="button" class="btn btn-danger btn-sm btn-del"
                                         data-id="<?php echo $val['id'];?>">
                                     删除

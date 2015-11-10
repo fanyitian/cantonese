@@ -26,6 +26,7 @@
                             <th>id</th>
                             <th>title</th>
                             <th>更新时间</th>
+                            <th>状态</th>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -35,11 +36,16 @@
                             <th scope="row"><?php echo $val['id'];?></th>
                             <td><?php echo $val['title'];?></td>
                             <td><?php echo $val['u_time'];?></td>
+                            <td class="<?php echo ($val['status'] == 0) ? 'text-danger' : 'text-muted';?>"><?php echo $val['status_name'];?></td>
                             <td>
                                 <a href="/admin/activity/detail?id=<?php echo $val['id'];?>"
                                    class="btn btn-default btn-sm btn-edit">
                                     编辑
                                 </a>
+                                <button type="button" class="btn btn-warning btn-sm btn-change"
+                                        data-id="<?php echo $val['id'];?>">
+                                    <?php echo ($val['status'] == 0) ? '隐藏' : '显示';?>
+                                </button>
                                 <button type="button" class="btn btn-danger btn-sm btn-del"
                                         data-id="<?php echo $val['id'];?>">
                                     删除

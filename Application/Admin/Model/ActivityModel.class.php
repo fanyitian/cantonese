@@ -23,6 +23,12 @@ class ActivityModel extends Model
 
     const TABLE_ACTIVITY = 'activity';
 
+    /**
+     * 状态定义
+     */
+    const STATUS_SHOW = 0;
+    const STATUS_HIDE = 1;
+
     protected static $instance;
 
     /**
@@ -45,7 +51,16 @@ class ActivityModel extends Model
     {
         $m = new Model(self::TABLE_ACTIVITY);
 
-        return $m->order('id desc')->select();
+        $data = $m->order('id desc')->select();
+
+        $newData = array();
+        foreach ($data as $val) {
+            $val['status_name'] = $val['status'] == self::STATUS_SHOW ? '显示' : '隐藏';
+
+            $newData[$val['id']] = $val;
+        }
+
+        return $newData;
     }
 
     /**

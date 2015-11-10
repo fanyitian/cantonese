@@ -92,4 +92,30 @@ class ActivityController extends CommonController
 
     }
 
+    public function status()
+    {
+        $id = $this->param('id');
+        $type = $this->param('type');
+        $data = ActivityModel::Instance()->getActivity($id);
+        if (empty($data)) {
+            $this->jsonOut(-1, '活动获取失败');
+        }
+
+        if (isset($type) && $type == 'change') {
+            $status = $data['status'] == ActivityModel::STATUS_SHOW ? ActivityModel::STATUS_HIDE : ActivityModel::STATUS_SHOW;
+            $res = ActivityModel::Instance()->update($id,
+                array(
+                    'status' => $status,
+                )
+            );
+            if (!$res) {
+                $this->jsonOut(-1, '更新失败');
+            }
+            $data['status'] = $status;
+            $this->jsonOut(1, 'ok', $data);
+        }
+
+        $this->jsonOut(1, 'ok', $data);
+    }
+
 }
