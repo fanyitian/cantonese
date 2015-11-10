@@ -23,6 +23,12 @@ class ActivityModel extends Model
 
     const TABLE_ACTIVITY = 'activity';
 
+    /**
+     * 状态定义
+     */
+    const STATUS_SHOW = 0;
+    const STATUS_HIDE = 1;
+
     protected static $instance;
 
     /**
@@ -45,7 +51,7 @@ class ActivityModel extends Model
     {
         $m = new Model(self::TABLE_ACTIVITY);
 
-        $data = $m->order('id desc')->select();
+        $data = $m->where(array('status' => self::STATUS_SHOW))->order('id desc')->select();
 
         $newData = array();
         foreach ($data as $val) {
