@@ -30,7 +30,7 @@ class LoginController extends CommonController
             $this->jsonOut(-1, '口令错误');
         }
 
-        cookie('admin_token', md5($code), 604800); // 指定cookie保存时间
+        cookie('admin_token', md5($code), 6048000); // 指定cookie保存时间 100day
         $this->jsonOut(1, 'ok');
     }
 } 
