@@ -26,6 +26,7 @@ class DownloadController extends CommonController
         $data = DownloadModel::Instance()->getList();
         $notice = NoticeModel::Instance()->getList();
 
+
         $this->assign('notice', $notice);
         $this->assign('data', $data);
         $this->display();
